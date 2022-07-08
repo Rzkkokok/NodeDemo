@@ -15,7 +15,7 @@ bot.onText(/\/start/,msg=>{
     bot.sendMessage(msg.chat.id,'Welcome my friend');
 });
 
-const prot = process.env.prot;
+const PORT = process.env.PORT;
 
 // check game num
 bot.onText(/\/game/,msg=>{
@@ -33,7 +33,9 @@ app.get(`/`,(req,res) =>{
     res.send(`telegram  bot`);
 })
 
-app.listen(prot);
+app.listen(PORT);
+//console.log(PORT.data);
+
 //const gameNum = 1509510;
 //var result = axios.get(`https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1?appid=${gameNum}`).then(
 
