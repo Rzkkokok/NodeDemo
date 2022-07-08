@@ -16,7 +16,7 @@ bot.onText(/\/game/,msg=>{
         var result = axios.get(`https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1?appid=1509510`).then(
         (result) =>{
             //console.log(result.data.response.player_count);
-            bot.sendMessage(msg.chat.id,'current game player' + result.data.response.player_count);
+            bot.sendMessage(msg.chat.id,'current game player: ' + result.data.response.player_count);
 
         }
     );
