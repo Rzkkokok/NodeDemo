@@ -8,7 +8,7 @@ const token = `5495241708:AAH3HaZ8LcgGFB_rfG9FwuqHG60LddBg6SU`;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
 
-bot.onText(/\start/,msg=>{
+bot.onText(/\/start/,msg=>{
     bot.sendMessage(msg.chat.id,'Welcome my friend');
 });
 
