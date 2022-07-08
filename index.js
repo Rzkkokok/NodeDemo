@@ -12,7 +12,7 @@ bot.onText(/\start/,msg=>{
     bot.sendMessage(msg.chat.id,'Welcome my friend');
 });
 
-const gameNum = 1509510;
+//const gameNum = 1509510;
 //var result = axios.get(`https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1?appid=${gameNum}`).then(
 
 //var result = axios.get(`https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1?appid=1509510`).then(
@@ -21,4 +21,4 @@ const gameNum = 1509510;
 //     }
 // );
 
-console.log("hello nodejs");
+//console.log("hello nodejs");
