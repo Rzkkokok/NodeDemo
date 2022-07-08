@@ -3,7 +3,7 @@ const http = require(`http`);
 const url = require(`url`);
 const axios = require('axios');
 const TelegramBot = require('node-telegram-bot-api');
-const express = request(`express`);
+const express = require(`express`);
 
 const app = express();
 const token = `5495241708:AAH3HaZ8LcgGFB_rfG9FwuqHG60LddBg6SU`;
@@ -23,7 +23,7 @@ bot.onText(/\/game/,msg=>{
         (result) =>{
             //console.log(result.data.response.player_count);
             bot.sendMessage(msg.chat.id,'current game player: ' + result.data.response.player_count);
-            
+
         }
     );
 });
