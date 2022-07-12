@@ -3,9 +3,9 @@ const http = require(`http`);
 const url = require(`url`);
 const axios = require('axios');
 const TelegramBot = require('node-telegram-bot-api');
-const express = require(`express`);
+//const express = require(`express`);
 
-const app = express();
+//const app = express();
 const token = `5495241708:AAH3HaZ8LcgGFB_rfG9FwuqHG60LddBg6SU`;
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
@@ -15,7 +15,7 @@ bot.onText(/\/start/,msg=>{
     bot.sendMessage(msg.chat.id,'Welcome my friend');
 });
 
-const PORT = process.env.PORT;
+//const PORT = process.env.PORT;
 
 // check game num
 bot.onText(/\/game/,msg=>{
@@ -29,11 +29,11 @@ bot.onText(/\/game/,msg=>{
 });
 
 
-app.get(`/`,(req,res) =>{
-    res.send(`telegram  bot`);
-})
+//app.get(`/`,(req,res) =>{
+//    res.send(`telegram  bot`);
+//})
 
-app.listen(PORT);
+//app.listen(PORT);
 //console.log(PORT.data);
 
 //const gameNum = 1509510;
