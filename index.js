@@ -28,6 +28,21 @@ bot.onText(/\/game/,msg=>{
     );
 });
 
+bot.onText(/\/views/,msg=>{
+    var result = axios.get(`https://store.steampowered.com/appreviews/1509510?json=1?filter=recent&day_range=365`).then(
+        (result) =>{
+            console.log(result.data.query_summary.total_positive );
+            var posNum = result.data.query_summary.total_positive;
+            console.log(result.data.query_summary.total_negative );
+            var negative = result.data.query_summary.total_negative;
+            console.log(result.data.query_summary.total_reviews);
+            var total = result.data.query_summary.total_reviews;
+            console.log(posNum / total);
+            bot.sendMessage(msg.chat.id,'current game player positive:'  + posNum + ` total_negative :` + negative +  ` rate:` + posNum / total);
+        }
+    );
+});
+
 
 
 //app.get(`/`,(req,res) =>{
@@ -47,3 +62,16 @@ bot.onText(/\/game/,msg=>{
 // );
 
 //console.log("hello nodejs");
+
+var result = axios.get(`https://store.steampowered.com/appreviews/1509510?json=1?filter=recent&day_range=365`).then(
+    (result) =>{
+        console.log(result.data.query_summary.review_score);
+        console.log(result.data.query_summary.total_positive );
+        var posNum = result.data.query_summary.total_positive;
+        console.log(result.data.query_summary.total_negative );
+        var negative = result.data.query_summary.total_negative;
+        console.log(result.data.query_summary.total_reviews);
+        var total = result.data.query_summary.total_reviews;
+        console.log(posNum / total);
+    }
+);
