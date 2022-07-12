@@ -29,6 +29,7 @@ bot.onText(/\/game/,msg=>{
 });
 
 
+
 //app.get(`/`,(req,res) =>{
 //    res.send(`telegram  bot`);
 //})
