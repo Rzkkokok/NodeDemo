@@ -24,8 +24,21 @@ bot.onText(/\/start/,msg=>{
 bot.onText(/\/game/,msg=>{
     var text = msg.text;
     var todo = text.split(` `).slice(1).join(` `);
-    console.log(todo);
-    var game = GameStart(todo).then(
+    var todoInt = parseInt(todo);
+    //console.log(todo);
+    if(isNaN(todoInt))
+    {
+        console.log(`NULL`);
+        //todo = todoInt;
+        //return;
+        //console.log(todoInt);
+
+    }
+    else{
+        todo = todoInt;
+        //console.log(`NULL`);
+    }
+    GameStart(todo).then(
         (theResult)=>{
             if(theResult == null)
             {
