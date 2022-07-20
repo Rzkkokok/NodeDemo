@@ -196,5 +196,4 @@ bot.onText(/\/spyowner/,msg=>{
 const GameStart = async function(name){
     const result = await appid(name);
     return result;
-    //console.log(result);
 }
